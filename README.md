@@ -43,7 +43,7 @@ export CI_REPORTS=$PWD/test/reports
 bundle exec rake minitest test
 </pre>
 
-Publishing Results using **Testspace**:
+Push Content using **Testspace client**:
 
 <pre>
 curl -s https://testspace-client.s3.amazonaws.com/testspace-linux.tgz | sudo tar -zxvf- -C /usr/local/bin
