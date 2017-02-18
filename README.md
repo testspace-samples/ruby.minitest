@@ -18,9 +18,9 @@ Using Multiple Online CI Services:
 ***
 **Test Content** published to www.testspace.com.
 
-[![Space Health](https://samples.testspace.com/projects/157/spaces/676/badge)](https://samples.testspace.com/projects/157/spaces/676 "Test Cases")
-[![Space Metric](https://samples.testspace.com/projects/157/spaces/676/metrics/604/badge)](https://samples.testspace.com/spaces/676/schema/Code%20Coverage "Code Coverage (lines)")
-[![Space Metric](https://samples.testspace.com/projects/157/spaces/676/metrics/605/badge)](https://samples.testspace.com/spaces/676/schema/Static%20Analysis "Static Analysis (issues)")
+[![Space Health](https://samples.testspace.com/spaces/676/badge)](https://samples.testspace.com/spaces/676 "Test Cases")
+[![Space Metric](https://samples.testspace.com/spaces/676/metrics/604/badge)](https://samples.testspace.com/spaces/676/schema/Code%20Coverage "Code Coverage (lines)")
+[![Space Metric](https://samples.testspace.com/spaces/676/metrics/605/badge)](https://samples.testspace.com/spaces/676/schema/Static%20Analysis "Static Analysis (issues)")
 
 ***
 To run this sample you will need a host workstation that supports the [Minitest test framework](http://docs.seattlerb.org/minitest/).
