@@ -13,14 +13,12 @@ bundle exec scss-lint --no-color --format=Stats --format=Default --out=tmp/scss-
 # Test
 bundle exec rake minitest test
 
-# Download Client
-curl -s https://testspace-client.s3.amazonaws.com/testspace-linux.tgz | sudo tar -zxvf- -C /usr/local/bin
+# Download and configure the Testspace client
+mkdir -p $HOME/bin
+curl -fsSL https://testspace-client.s3.amazonaws.com/testspace-linux.tgz | tar -zxvf- -C $HOME/bin
+# note c9 host requires "access token", storing in ~/.netrc (refer to https://help.testspace.com/reference:client-reference#login-credentials)
+CI=true testspace config url samples.testspace.com
 
-# Publish
-
-## Requires TESTSPACE_TOKEN = $ACCESS_TOKEN:@samples.testspace.com. Also note that CI_REPORTS is referenced in .testspace.txt 
-BRANCH_NAME=`git symbolic-ref --short HEAD`
-GIT_URL=`git remote show origin -n | grep Fetch\ URL: | sed 's/.*URL: //'`
-REPO_SLUG=`echo ${GIT_URL#*github.com?} | sed 's/.git//'`
-
-CI_REPORTS=$PWD/test/reports testspace @.testspace.txt $TESTSPACE_TOKEN/${REPO_SLUG/\//:}/${BRANCH_NAME}#c9.Build
+# Push content
+#  using "list file" because 5 items being pushed
+testspace @.testspace.txt "#c9.Build" --repo git
