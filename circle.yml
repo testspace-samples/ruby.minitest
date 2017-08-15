@@ -17,4 +17,4 @@ test:
     - bundle exec rake minitest test
 
   post:
-   - testspace @.testspace.txt
+   - CI_REPORTS=$CIRCLE_TEST_REPORTS testspace @.testspace.txt

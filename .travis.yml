@@ -18,4 +18,4 @@ script:
   - bundle exec rake minitest test
 
 after_script:  
-  - testspace @.testspace.txt
+  - CI_REPORTS=$PWD/test/reports testspace @.testspace.txt

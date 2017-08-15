@@ -21,4 +21,4 @@ CI=true testspace config url samples.testspace.com
 
 # Push content
 #  using "list file" because 5 items being pushed
-testspace @.testspace.txt "#c9.Build" --repo git
+CI_REPORTS=$PWD/test/reports testspace @.testspace.txt "#c9.Build" --repo git

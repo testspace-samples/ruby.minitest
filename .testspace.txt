@@ -2,5 +2,5 @@
 tmp/rubocop.txt{lint}
 tmp/brakeman_checkstyle.xml
 tmp/scss-lint.txt{lint}
-[Tests]$PWD/test/reports/TEST*.xml{test} 
+[Tests]$CI_REPORTS/TEST*.xml{test} 
 coverage/coverage.xml

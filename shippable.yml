@@ -16,7 +16,7 @@
    - bundle exec rake minitest test
 
  on_success:
-  - testspace @.testspace.txt
+  - CI_REPORTS=$PWD/test/reports testspace @.testspace.txt
 
  on_failure:
-  - testspace @.testspace.txt
+  - CI_REPORTS=$PWD/test/reports testspace @.testspace.txt
