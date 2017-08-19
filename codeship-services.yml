@@ -1,0 +1,4 @@
+testspace_sample:
+  build:
+    image: ruby:2.3.4
+    dockerfile: Dockerfile

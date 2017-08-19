@@ -1,0 +1,5 @@
+- type: serial
+  services:
+  - testspace_sample
+  steps:
+  - command: /app/run_tests.sh
