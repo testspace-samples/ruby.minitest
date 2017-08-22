@@ -1,0 +1,32 @@
+version: 2
+
+jobs:
+  build:
+    working_directory: ~/ruby.minitest
+    docker:
+      - image: circleci/ruby:2.3.4-node
+    steps:
+      - checkout
+      - run: gem install bundler
+      # Install and configure Testspace client
+      - run: mkdir -p $HOME/bin
+      - run: echo 'export PATH=$PATH:$HOME/bin' >> $BASH_ENV
+      - run: curl -fsSL https://testspace-client.s3.amazonaws.com/testspace-linux.tgz | tar -zxvf- -C $HOME/bin
+      - run: echo $PATH
+      - run: testspace config url samples.testspace.com
+
+      - run: bundle install
+      - run: bundle exec rubocop --format emacs --out tmp/rubocop.txt || true
+      - run: bundle exec brakeman -o tmp/brakeman.json
+      - run: bundle exec brakeman_translate_checkstyle_format translate --file="tmp/brakeman.json" > tmp/brakeman_checkstyle.xml
+      - run: bundle exec scss-lint --no-color --format=Stats --format=Default --out=tmp/scss-lint.txt  app/assets/stylesheets/ || true
+      - run: bundle exec rake minitest test
+      - run:
+          name: Push Results to Testspace
+          command: CI_REPORTS=$PWD/test/reports testspace @.testspace.txt
+          when: always
+
+      - store_test_results:
+          path: ~/ruby.minitest/test/reports
+      - store_artifacts:
+          path: ~/ruby.minitest/test/reports
