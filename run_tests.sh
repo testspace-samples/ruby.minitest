@@ -1,7 +1,7 @@
 #!/bin/bash
 set -x
 mkdir -p $HOME/bin
-curl -fsSL https://testspace-client.s3.amazonaws.com/testspace-linux.tgz | tar -zxvf- -C $HOME/bin
+curl -fsSL https://testspace-client.s3.amazonaws.com/testspace-linux-dev.tgz | tar -zxvf- -C $HOME/bin
 
 CI_BUILD_NUMBER=$CI_BUILD_ID CI_REPO_NAME=testspace-samples/$CI_REPO_NAME testspace config url https://b679ddfa81614745bd810eb3d8dbdd637e05b71e:@samples.testspace.com/
 bundle exec rubocop --format emacs --out tmp/rubocop.txt || true
