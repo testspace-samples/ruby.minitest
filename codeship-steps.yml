@@ -3,5 +3,5 @@
   - testspace_sample
   steps:
   - command: /app/run_tests.sh
-  - printenv
-  - git remote get-url origin
+  - command: printenv
+  - command: git remote get-url origin
