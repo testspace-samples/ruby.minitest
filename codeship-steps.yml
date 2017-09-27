@@ -4,4 +4,4 @@
   steps:
   - command: /app/run_tests.sh
   - command: printenv
-  - command: git remote -v
+  - command: git config --get remote.origin.url
