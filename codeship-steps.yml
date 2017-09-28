@@ -6,3 +6,9 @@
   - name: p2
     service: testspace_sample
     command: /app/run_tests.sh
+
+- type: serial
+  steps:
+  - name: s2
+    service: testspace_sample
+    command: /app/run_tests.sh
