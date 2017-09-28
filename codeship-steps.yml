@@ -1,7 +1,8 @@
-- type: serial
-  services:
-  - testspace_sample
+- type: parallel
   steps:
-  - command: /app/run_tests.sh
-  - command: printenv
-  - command: git config --get remote.origin.url
+  -name: p1
+    service: testspace_sample
+    command: /app/run_tests.sh
+  -name: p2
+    service: testspace_sample
+    command: /app/run_tests.sh
