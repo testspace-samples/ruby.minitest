@@ -3,15 +3,12 @@
   - name: p1
     service: testspace_sample
     command: /app/run_tests.sh
-    command: printenv
   - name: p2
     service: testspace_sample
     command: /app/run_tests.sh
-    command: printenv
 
 - type: serial
   steps:
   - name: s2
     service: testspace_sample
     command: /app/run_tests.sh
-    command: printenv
