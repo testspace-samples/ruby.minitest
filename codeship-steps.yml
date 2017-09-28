@@ -1,8 +1,8 @@
 - type: parallel
   steps:
-  -name: p1
+  - name: p1
     service: testspace_sample
     command: /app/run_tests.sh
-  -name: p2
+  - name: p1
     service: testspace_sample
     command: /app/run_tests.sh
