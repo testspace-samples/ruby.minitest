@@ -3,6 +3,6 @@
   - name: p1
     service: testspace_sample
     command: /app/run_tests.sh
-  - name: p1
+  - name: p2
     service: testspace_sample
     command: /app/run_tests.sh
