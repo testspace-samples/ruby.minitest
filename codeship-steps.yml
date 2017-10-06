@@ -1,14 +1,5 @@
-- type: parallel
-  steps:
-  - name: p1
-    service: testspace_sample
-    command: /app/run_tests.sh
-  - name: p2
-    service: testspace_sample
-    command: /app/run_tests.sh
-
 - type: serial
+  services:
+  - testspace_sample
   steps:
-  - name: s2
-    service: testspace_sample
-    command: /app/run_tests.sh
+  - command: /app/run_tests.sh 
