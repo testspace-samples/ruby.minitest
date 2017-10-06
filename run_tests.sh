@@ -2,7 +2,7 @@
 set -x
 
 printenv
-
+testspace config url https://b679ddfa81614745bd810eb3d8dbdd637e05b71e:@samples.testspace.com/
 bundle exec rubocop --format emacs --out tmp/rubocop.txt || true
 bundle exec brakeman -o tmp/brakeman.json
 bundle exec brakeman_translate_checkstyle_format translate --file="tmp/brakeman.json" > tmp/brakeman_checkstyle.xml
