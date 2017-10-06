@@ -3,6 +3,10 @@
  rvm:
   - 2.3.1
 
+branches:
+  except:
+    - codeship
+
  build:
   ci:
    - mkdir -p $HOME/bin
