@@ -2,5 +2,4 @@
   services:
   - testspace_sample
   steps:
-  - command: testspace config url 06672ad55f6e63bbc07fc87cf33c9225d1407ace:@samples.testspace.com
   - command: testspace [Tests]./test/reports/TEST*.xml{test} --command "bundle exec rake minitest test"
