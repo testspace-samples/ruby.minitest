@@ -3,4 +3,4 @@ testspace_sample:
     image: ruby:2.3.4
     dockerfile: Dockerfile
   volumes:
-    - ./tmp:/tmp
+    - /tmp
