@@ -13,5 +13,5 @@ RUN bundle install
 
 RUN printenv
 RUN ls -la
-RUN git symbolic-ref --short HEAD
+RUN git ls-remote .
 RUN testspace config url 06672ad55f6e63bbc07fc87cf33c9225d1407ace:@samples.testspace.com CI=true CI_NAME=codeship
