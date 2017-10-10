@@ -14,5 +14,5 @@ RUN bundle install
 RUN printenv
 RUN ls -la
 
-RUN cat .git/HEAD
+RUN git name-rev --no-undefined --name-only --refs=origin/* $(git rev-parse HEAD)
 RUN testspace config url 06672ad55f6e63bbc07fc87cf33c9225d1407ace:@samples.testspace.com CI=true CI_NAME=codeship
