@@ -3,9 +3,9 @@
  rvm:
   - 2.3.1
 
-branches:
+ branches:
   except:
-    - codeship
+  - codeship
 
  build:
   ci:
