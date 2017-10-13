@@ -3,3 +3,10 @@
   - testspace_sample
   steps:
   - command: testspace [Tests]./test/reports/TEST*.xml{test} --command "bundle exec rake minitest test"
+
+- type: parallel
+  steps:
+    - service: testspace_sample
+      command: testspace [Tests]./test/reports/TEST*.xml{test} --command "bundle exec rake minitest test"
+    - service: testspace_sample
+      command: testspace [Tests]./test/reports/TEST*.xml{test} --command "bundle exec rake minitest test"
