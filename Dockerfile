@@ -7,7 +7,7 @@ WORKDIR /app
 RUN curl -fsSL https://testspace-client.s3.amazonaws.com/testspace-linux-dev.tgz | tar -zxvf- -C /usr/local/bin
 
 RUN printenv
-RUN testspace config url 06672ad55f6e63bbc07fc87cf33c9225d1407ace:@samples.testspace.com/
+RUN testspace config url e18dc52ec2bceda7689d7e5bfed6791e26d449f8:@open.stridespace.com/
 
 COPY Gemfile ./Gemfile
 COPY Gemfile.lock ./Gemfile.lock
