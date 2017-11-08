@@ -15,4 +15,4 @@ RUN printenv
 COPY . ./
 
 RUN curl -fsSL https://testspace-client.s3.amazonaws.com/testspace-linux-dev.tgz | tar -zxvf- -C /usr/local/bin
-RUN testspace config url http://e18dc52ec2bceda7689d7e5bfed6791e26d449f8:@open.stridespace.com/
+RUN testspace config url http://6652e82b8d13db77781a560f830923f1ee1efc3e:@samples.testspace.com/
