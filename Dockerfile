@@ -10,8 +10,6 @@ COPY Gemfile Gemfile.lock ./
 
 RUN bundle install
 
-RUN printenv
-
 COPY . ./
 
 RUN curl -fsSL https://testspace-client.s3.amazonaws.com/testspace-linux-dev.tgz | tar -zxvf- -C /usr/local/bin
