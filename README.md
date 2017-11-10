@@ -18,6 +18,7 @@ Using Multiple Online CI Services:
 [![Build Status](https://travis-ci.org/testspace-samples/ruby.minitest.svg?branch=master)](https://travis-ci.org/testspace-samples/ruby.minitest)
 [![CircleCI](https://circleci.com/gh/testspace-samples/ruby.minitest/tree/master.svg?style=svg)](https://circleci.com/gh/testspace-samples/ruby.minitest/tree/master)
 [![Run Status](https://api.shippable.com/projects/5703dabb2a8192902e1b99ce/badge?branch=master)](https://app.shippable.com/projects/5703dabb2a8192902e1b99ce)
+[ ![Codeship Status](https://app.codeship.com/projects/eb40a080-6412-0135-6105-4ab105608534/status?branch=master)](https://app.codeship.com/projects/240271)
 
 
 ***
