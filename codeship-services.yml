@@ -1,0 +1,5 @@
+testspace_sample:
+  build:
+    image: ruby:2.3.4
+    dockerfile: Dockerfile
+    encrypted_args: egYblDOciD4mOvWkp2DvK2WuptuFRTPddcuXcRIp+4Mo3J5um3gpQRXSh1xFTtC4oYKDzh3wcrpjautR6rWg5e6mxSWYx5hn
