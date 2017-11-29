@@ -2,5 +2,5 @@
   services:
   - testspace_sample
   steps:
-  - command: testspace [Tests]./test/reports/TEST*.xml{test} coverage/coverage.xml --command="bundle exec rake minitest test"
+  - command: testspace [Tests]./test/reports/TEST*.xml{test} coverage/coverage.xml --command "bundle exec rake minitest test"
   - command: testspace tmp/rubocop.txt{lint} tmp/brakeman_checkstyle.xml tmp/scss-lint.txt{lint} --command="./run_analysis.sh"
