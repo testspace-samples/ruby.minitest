@@ -12,8 +12,8 @@ before_script:
 script:
   - bundle install
   - bundle exec rubocop --format emacs --out reports/rubocop.txt || true
-  - bundle exec brakeman -o tmp/brakeman.json
-  - bundle exec brakeman_translate_checkstyle_format translate --file="tmp/brakeman.json" > reports/brakeman_checkstyle.xml
+  - bundle exec brakeman -o reports/brakeman.json
+  - bundle exec brakeman_translate_checkstyle_format translate --file="reports/brakeman.json" > reports/brakeman_checkstyle.xml
   - bundle exec scss-lint --no-color --format=Stats --format=Default --out=reports/scss-lint.txt  app/assets/stylesheets/ || true
   - CI_REPORTS=reports/test bundle exec rake minitest test
 

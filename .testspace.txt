@@ -2,5 +2,5 @@
 reports/rubocop.txt{lint}
 reports/brakeman_checkstyle.xml
 reports/scss-lint.txt{lint}
-[Tests]reports/TEST*.xml{test}
+[Tests]reports/test/TEST*.xml{test}
 coverage/coverage.xml

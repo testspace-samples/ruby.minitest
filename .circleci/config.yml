@@ -31,8 +31,8 @@ jobs:
           command: bundle exec scss-lint --no-color --format=Stats --format=Default --out=reports/scss-lint.txt  app/assets/stylesheets/ || true
       - run:
           name: Run brakeman
-          command: bundle exec brakeman -o tmp/brakeman.json
-      - run: bundle exec brakeman_translate_checkstyle_format translate --file="tmp/brakeman.json" > reports/brakeman_checkstyle.xml
+          command: bundle exec brakeman -o reports/brakeman.json
+      - run: bundle exec brakeman_translate_checkstyle_format translate --file="reports/brakeman.json" > reports/brakeman_checkstyle.xml
       - run:
           name: Run specs
           command: CI_REPORTS=reports/test bundle exec rake minitest test
