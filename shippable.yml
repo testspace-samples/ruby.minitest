@@ -9,14 +9,14 @@
    - curl -fsSL https://testspace-client.s3.amazonaws.com/testspace-linux.tgz | tar -zxvf- -C $HOME/bin
    - testspace config url samples.testspace.com
    - bundle install
-   - bundle exec rubocop --format emacs --out tmp/rubocop.txt || true
+   - bundle exec rubocop --format emacs --out reports/rubocop.txt || true
    - bundle exec brakeman -o tmp/brakeman.json
-   - bundle exec brakeman_translate_checkstyle_format translate --file="tmp/brakeman.json" > tmp/brakeman_checkstyle.xml
-   - bundle exec scss-lint --no-color --format=Stats --format=Default --out=tmp/scss-lint.txt  app/assets/stylesheets/ || true
-   - bundle exec rake minitest test
+   - bundle exec brakeman_translate_checkstyle_format translate --file="tmp/brakeman.json" > reports/brakeman_checkstyle.xml
+   - bundle exec scss-lint --no-color --format=Stats --format=Default --out=reports/scss-lint.txt  app/assets/stylesheets/ || true
+   - CI_REPORTS=reports/test bundle exec rake minitest test
 
   on_success:
-   - CI_REPORTS=$PWD/test/reports testspace @.testspace.txt
+   - testspace @.testspace.txt
 
   on_failure:
-   - CI_REPORTS=$PWD/test/reports testspace @.testspace.txt
+   - testspace @.testspace.txt
