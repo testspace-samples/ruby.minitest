@@ -15,8 +15,5 @@
    - bundle exec scss-lint --no-color --format=Stats --format=Default --out=reports/scss-lint.txt  app/assets/stylesheets/ || true
    - CI_REPORTS=reports/test bundle exec rake minitest test
 
-  on_success:
-   - testspace @.testspace.txt
-
-  on_failure:
+ always:
    - testspace @.testspace.txt
