@@ -1,19 +1,19 @@
- language: ruby
+language: ruby
 
- rvm:
-  - 2.3.1
+rvm:
+ - 2.3.1
 
- build:
-  ci:
-   - mkdir -p $HOME/bin
-   - curl -fsSL https://testspace-client.s3.amazonaws.com/testspace-linux.tgz | tar -zxvf- -C $HOME/bin
-   - testspace config url samples.testspace.com
-   - bundle install
-   - bundle exec rubocop --format emacs --out reports/rubocop.txt || true
-   - bundle exec brakeman -o reports/brakeman.json
-   - bundle exec brakeman_translate_checkstyle_format translate --file="reports/brakeman.json" > reports/brakeman_checkstyle.xml
-   - bundle exec scss-lint --no-color --format=Stats --format=Default --out=reports/scss-lint.txt  app/assets/stylesheets/ || true
-   - CI_REPORTS=reports/test bundle exec rake minitest test
+build:
+ ci:
+  - mkdir -p $HOME/bin
+  - curl -fsSL https://testspace-client.s3.amazonaws.com/testspace-linux.tgz | tar -zxvf- -C $HOME/bin
+  - testspace config url samples.testspace.com
+  - bundle install
+  - bundle exec rubocop --format emacs --out reports/rubocop.txt || true
+  - bundle exec brakeman -o reports/brakeman.json
+  - bundle exec brakeman_translate_checkstyle_format translate --file="reports/brakeman.json" > reports/brakeman_checkstyle.xml
+  - bundle exec scss-lint --no-color --format=Stats --format=Default --out=reports/scss-lint.txt  app/assets/stylesheets/ || true
+  - CI_REPORTS=reports/test bundle exec rake minitest test
 
  always:
-   - testspace @.testspace.txt
+  - testspace @.testspace.txt
