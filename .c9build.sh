@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Build
-gem install bundler
+gem install bundler -v "~> 1.7"
 bundle install
 
 # Analysis

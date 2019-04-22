@@ -40,11 +40,14 @@ GEM
     ansi (1.5.0)
     arel (6.0.3)
     ast (2.3.0)
+    autoprefixer-rails (9.5.1)
+      execjs
     bcrypt (3.1.7)
     binding_of_caller (0.7.3.pre1)
       debug_inspector (>= 0.0.1)
-    bootstrap-sass (3.2.0.0)
-      sass (~> 3.2)
+    bootstrap-sass (3.3.7)
+      autoprefixer-rails (>= 5.2.1)
+      sass (>= 3.3.4)
     bootstrap-will_paginate (0.0.10)
       will_paginate
     brakeman (3.3.3)
@@ -359,7 +362,7 @@ PLATFORMS
 
 DEPENDENCIES
   bcrypt (= 3.1.7)
-  bootstrap-sass (= 3.2.0.0)
+  bootstrap-sass (= 3.3.7)
   bootstrap-will_paginate (= 0.0.10)
   brakeman
   brakeman_translate_checkstyle_format
@@ -392,4 +395,4 @@ DEPENDENCIES
   will_paginate (= 3.0.7)
 
 BUNDLED WITH
-   1.12.5
+   1.15.3
