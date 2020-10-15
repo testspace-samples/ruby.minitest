@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails',                   '4.2.2'
+gem 'rails',                   '4.2.11.3'
 gem 'bcrypt',                  '3.1.7'
 gem 'faker',                   '1.4.2'
 gem 'carrierwave',             '0.10.0'
@@ -23,7 +23,7 @@ group :development, :test do
   gem 'pry-byebug', platform: [:ruby_20]
   gem 'web-console', '2.0.0.beta3'
   gem 'spring',      '1.1.3'
-  
+
    # A Ruby static code analyzer.
   gem 'rubocop', :require => false
   # A static analysis security vulnerability scanner for Ruby on Rails.
@@ -47,5 +47,5 @@ end
 group :production do
  # gem 'pg',             '0.17.1'
   gem 'rails_12factor', '0.0.2'
-  gem 'puma',           '3.1.0'
+  gem 'puma',           '3.12.6'
 end
