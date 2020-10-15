@@ -9,16 +9,15 @@ We have made a few minor modifications to original project for publishing.
 
   * Using a Testspace Project that is `connected` with this GitHub Repo
   * Using 3 Online CI services for demonstration purposes only
-  * Can review the Results at [testspace-samples:ruby.minitest](https://samples.testspace.com/projects/testspace-samples:ruby.minitest)  
-  * Refer to our [Getting Started](https://help.testspace.com/getting-started) help articles for more information
+  * Can review the Results at [testspace-samples:ruby.minitest](https://samples.testspace.com/projects/testspace-samples:ruby.minitest)
+  * Refer to our [Help](https://help.testspace.com/) for more information
 
 ***
 Using Multiple Online CI Services:
 
+![Build](https://github.com/testspace-samples/ruby.minitest/workflows/Build/badge.svg)
 [![Build Status](https://travis-ci.org/testspace-samples/ruby.minitest.svg?branch=master)](https://travis-ci.org/testspace-samples/ruby.minitest)
 [![CircleCI](https://circleci.com/gh/testspace-samples/ruby.minitest/tree/master.svg?style=svg)](https://circleci.com/gh/testspace-samples/ruby.minitest/tree/master)
-[![Run Status](https://api.shippable.com/projects/5a1068f9e366a70700f78956/badge?branch=master)](https://app.shippable.com/github/testspace-samples/ruby.minitest)
-[ ![Codeship Status](https://app.codeship.com/projects/eb40a080-6412-0135-6105-4ab105608534/status?branch=master)](https://app.codeship.com/projects/240271)
 
 
 ***
@@ -30,7 +29,7 @@ Using Multiple Online CI Services:
 
 ***
 
-Download and configure the Testspace client 
+Download and configure the Testspace client
 
 <pre>
 mkdir -p $HOME/bin
